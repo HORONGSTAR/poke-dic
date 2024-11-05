@@ -175,6 +175,9 @@ h1 .subtag {
    filter: grayscale();
 }
 
+.activate h3 {
+   color: #bbb;
+}
 .normal {
    background-color: #999999;
 }
