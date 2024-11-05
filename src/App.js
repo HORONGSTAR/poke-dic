@@ -2,12 +2,12 @@ import React, { useState, useCallback, useRef } from 'react'
 import Template from './components/Template'
 import List from './components/List'
 import Insert from './components/Insert'
+import { TbWorldSearch } from 'react-icons/tb'
+
 import './App.css'
 
 function App() {
-   const [pokes, setPokes] = useState([
-      { id: 1, num: '0001', name: '이상해씨', types: ['풀', '독'], checked: false },
-   ])
+   const [pokes, setPokes] = useState([{ id: 1, num: '0001', name: '이상해씨', types: ['풀', '독'], checked: false }])
 
    const nextId = useRef(2)
 
@@ -167,13 +167,17 @@ function App() {
             { num: '0151', name: '뮤', types: ['에스퍼'] },
          ]
          const find = pokeDates.filter((pokeDate) => pokeDate.name === keyword)
-         const poke = {
-            ...find[0],
-            id: nextId.current,
-            checked: false,
+         if (find[0]) {
+            const poke = {
+               ...find[0],
+               id: nextId.current,
+               checked: false,
+            }
+            setPokes(pokes.concat(poke))
+            nextId.current += 1
+         } else {
+            return
          }
-         setPokes(pokes.concat(poke))
-         nextId.current += 1
       },
       [pokes]
    )
@@ -188,9 +192,7 @@ function App() {
 
    const onToggle = useCallback(
       (id) => {
-         const toggleTodos = pokes.map((poke) =>
-            poke.id === id ? { ...poke, checked: !poke.checked } : poke
-         )
+         const toggleTodos = pokes.map((poke) => (poke.id === id ? { ...poke, checked: !poke.checked } : poke))
          setPokes(toggleTodos)
       },
       [pokes]
@@ -198,10 +200,21 @@ function App() {
 
    return (
       <div>
-         <Template>
-            <Insert onInsert={onInsert}></Insert>
-            <List pokes={pokes} onRemove={onRemove} onToggle={onToggle}></List>
-         </Template>
+         <header>
+            <h1>
+               <div className="titelicon">
+                  <TbWorldSearch />
+               </div>
+               포켓몬 도감
+               <div className="subtag">1세대</div>
+            </h1>
+         </header>
+         <main className="container">
+            <Template>
+               <Insert onInsert={onInsert}></Insert>
+               <List pokes={pokes} onRemove={onRemove} onToggle={onToggle}></List>
+            </Template>
+         </main>
       </div>
    )
 }

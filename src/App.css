@@ -1,0 +1,270 @@
+body {
+   background-color: skyblue;
+   font-family: 'Pretendard', sans-serif;
+   color: #222;
+}
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 10px;
+}
+
+h1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: white;
+}
+h1 .titelicon {
+   margin-right: 4px;
+}
+
+h1 .subtag {
+   font-size: 16px;
+   background: white;
+   color: skyblue;
+   padding: 4px 6px;
+   margin-left: 5px;
+   border-radius: 5px;
+}
+
+.Template {
+   padding: 20px;
+   background-color: white;
+   border-radius: 10px;
+}
+
+.Insert {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(42, 164, 235);
+   height: 40px;
+   max-width: 350px;
+   margin: 0 auto;
+   border-radius: 10px;
+   color: white;
+}
+
+.Insert label {
+   font-weight: bold;
+   font-size: 18px;
+}
+
+.Insert input {
+   height: 30px;
+   width: 190px;
+   border: none;
+   border-bottom: 2px solid white;
+   background-color: white;
+}
+
+.Insert input:focus {
+   outline: none;
+}
+
+.Insert button {
+   font-weight: bold;
+   font-size: 18px;
+   background-color: rgb(42, 164, 235);
+   color: white;
+   border: none;
+   margin-left: 5px;
+   border-radius: 4px;
+   padding: 4px 8px;
+   cursor: pointer;
+   font-family: 'Pretendard', sans-serif;
+}
+
+.Insert button:hover {
+   color: white;
+   background-color: rgb(42, 164, 235);
+}
+
+.List {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.edit-btn {
+   text-align: right;
+   padding: 10px 0;
+}
+
+.edit-btn > button {
+   cursor: pointer;
+   font-family: 'Pretendard', sans-serif;
+   border: none;
+   background-color: white;
+   color: #888;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.edit-btn:hover {
+   color: #222;
+}
+
+.ListItem {
+   margin: 20px;
+   box-sizing: border-box;
+   padding: 10px;
+   width: 20%;
+   border: 1px solid #eee;
+   border-radius: 10px;
+   transform: translateY(0px);
+}
+
+.ListItem:hover {
+   box-shadow: 0 2px 5px #eee;
+   transition: 0.3s ease-out;
+   transform: translateY(-10px);
+}
+
+.ListItem img {
+   width: 100%;
+}
+.ListItem small {
+   color: #aaa;
+}
+.ListItem h3 {
+   padding: 5px 0;
+   margin: 0;
+}
+
+.ListItem .info {
+   padding: 5px 0;
+   margin: 0;
+   display: flex;
+   align-items: center;
+}
+
+.ListItem .remove {
+   display: none;
+   border-top: 1px solid #eee;
+   text-align: center;
+   padding: 0;
+   padding-top: 5px;
+   margin: 0;
+   color: crimson;
+   font-weight: bold;
+   cursor: pointer;
+   font-size: 14px;
+}
+
+.ListItem .remove.edit {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.ListItem .type {
+   margin-right: 4px;
+   padding: 2px 20px;
+   border-radius: 10px;
+   color: white;
+   font-weight: bold;
+   font-size: 14px;
+   height: 20px;
+   display: flex;
+   align-items: center;
+}
+
+.activate img {
+   filter: grayscale();
+}
+
+.normal {
+   background-color: #999999;
+}
+
+.flame {
+   background-color: #ff612c;
+}
+
+.water {
+   background-color: #2992ff;
+}
+
+.grass {
+   background-color: #42bf24;
+}
+
+.electricity {
+   background-color: #ffdb00;
+}
+
+.ice {
+   background-color: #42d8ff;
+}
+
+.fight {
+   background-color: #ffa202;
+}
+
+.poison {
+   background-color: #994dcf;
+}
+
+.earth {
+   background-color: #ab7939;
+}
+
+.flight {
+   background-color: #95c9ff;
+}
+
+.esper {
+   background-color: #ff637f;
+}
+
+.worm {
+   background-color: #9fa424;
+}
+
+.rocks {
+   background-color: #bcb889;
+}
+
+.ghost {
+   background-color: #6e4570;
+}
+
+.dragon {
+   background-color: #5462d6;
+}
+
+.evil {
+   background-color: #393939;
+}
+
+.steel {
+   background-color: #6aaed3;
+}
+
+.fairy {
+   background-color: #ffb1ff;
+}
+
+.ListItem .activate .type {
+   background-color: #bbb;
+}
+
+@media (max-width: 991px) {
+   .ListItem {
+      width: 25%;
+   }
+}
+
+@media (max-width: 767px) {
+   .ListItem {
+      width: 33.3%;
+   }
+}
+
+@media (max-width: 575px) {
+   .ListItem {
+      width: 50%;
+   }
+}

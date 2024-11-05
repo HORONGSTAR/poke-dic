@@ -13,9 +13,9 @@ function Insert({ onInsert }) {
       [onInsert, keyword]
    )
    return (
-      <div>
+      <div className="Insert">
          <form onSubmit={onSubmit}>
-            <label htmlFor="insert">포켓몬 이름</label>
+            <label htmlFor="insert">포켓몬 이름 </label>
             <input type="text" id="insert" value={keyword} onChange={onChange} />
             <button type="sudmit">등록</button>
          </form>
