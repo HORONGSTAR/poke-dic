@@ -29,6 +29,13 @@ h1 .subtag {
    border-radius: 5px;
 }
 
+button {
+   cursor: pointer;
+   font-family: 'Pretendard', sans-serif;
+   border: none;
+   background-color: transparent;
+}
+
 .Template {
    padding: 20px;
    background-color: white;
@@ -36,28 +43,25 @@ h1 .subtag {
 }
 
 .Insert {
+   padding: 10px;
+}
+
+.Insert form {
    display: flex;
    justify-content: center;
    align-items: center;
-   background-color: rgb(42, 164, 235);
+   background-color: #2aa4eb;
    height: 40px;
-   max-width: 350px;
+   max-width: 316px;
    margin: 0 auto;
-   border-radius: 10px;
+   border-radius: 2px;
    color: white;
-}
-
-.Insert label {
-   font-weight: bold;
-   font-size: 18px;
 }
 
 .Insert input {
    height: 30px;
-   width: 190px;
+   width: 250px;
    border: none;
-   border-bottom: 2px solid white;
-   background-color: white;
 }
 
 .Insert input:focus {
@@ -67,19 +71,16 @@ h1 .subtag {
 .Insert button {
    font-weight: bold;
    font-size: 18px;
-   background-color: rgb(42, 164, 235);
+   background-color: #2aa4eb;
    color: white;
-   border: none;
    margin-left: 5px;
    border-radius: 4px;
    padding: 4px 8px;
-   cursor: pointer;
-   font-family: 'Pretendard', sans-serif;
 }
 
 .Insert button:hover {
    color: white;
-   background-color: rgb(42, 164, 235);
+   background-color: #2aa4eb;
 }
 
 .List {
@@ -93,12 +94,8 @@ h1 .subtag {
 }
 
 .edit-btn > button {
-   cursor: pointer;
-   font-family: 'Pretendard', sans-serif;
-   border: none;
    background-color: white;
    color: #888;
-   cursor: pointer;
    font-size: 16px;
 }
 
@@ -110,13 +107,13 @@ h1 .subtag {
    margin: 10px;
    box-sizing: border-box;
    padding: 10px;
-   width: 17.7%;
+   width: 17%;
    border: 1px solid #eee;
    border-radius: 10px;
    transform: translateY(0px);
 }
 
-.ListItem:hover {
+.ListItem:hover:not(.editItme) {
    box-shadow: 0 2px 5px #eee;
    transition: 0.3s ease-out;
    transform: translateY(-10px);
@@ -134,26 +131,31 @@ h1 .subtag {
 }
 
 .ListItem .info {
-   padding: 5px 0;
+   padding-bottom: 10px;
    margin: 0;
    display: flex;
    align-items: center;
 }
-
+.ListItem .evolution {
+   display: none;
+   border-top: 1px solid #eee;
+   text-align: center;
+   padding: 5px;
+   color: #2aa4eb;
+   font-weight: bold;
+   cursor: pointer;
+}
 .ListItem .remove {
    display: none;
    border-top: 1px solid #eee;
    text-align: center;
-   padding: 0;
    padding-top: 5px;
-   margin: 0;
    color: crimson;
    font-weight: bold;
    cursor: pointer;
-   font-size: 14px;
 }
 
-.ListItem .remove.edit {
+.ListItem .editItme {
    display: flex;
    justify-content: center;
    align-items: center;

@@ -1,9 +1,10 @@
 import React from 'react'
 import classNames from 'classnames'
 import { TiDeleteOutline } from 'react-icons/ti'
+import { MdOutlineChangeCircle } from 'react-icons/md'
 
-function ListItem({ poke, onRemove, onToggle, disPlay }) {
-   const { id, num, name, types, checked } = poke
+function ListItem({ poke, onRemove, onToggle, edit, onEvolution }) {
+   const { id, num, name, types, checked, evolution } = poke
 
    const imgsrc = 'https://data1.pokemonkorea.co.kr/newdata/pokedex/full/' + num + '01.png'
 
@@ -69,7 +70,7 @@ function ListItem({ poke, onRemove, onToggle, disPlay }) {
    })
 
    return (
-      <div key={id} className="ListItem">
+      <div key={id} className={classNames('ListItem', { editItme: edit })}>
          <div onDoubleClick={() => onToggle(id)} onClick={() => onToggle(!id)} className={classNames({ activate: checked })}>
             <img src={imgsrc} alt={name} />
             <small>No.{num}</small>
@@ -79,13 +80,22 @@ function ListItem({ poke, onRemove, onToggle, disPlay }) {
             </div>
          </div>
          <div
-            className={classNames('remove', { edit: disPlay })}
+            className={classNames('evolution', { editItme: edit })}
+            onClick={() => {
+               onEvolution(id)
+            }}
+         >
+            <MdOutlineChangeCircle />
+            진화
+         </div>
+         <div
+            className={classNames('remove', { editItme: edit })}
             onClick={() => {
                onRemove(id)
             }}
          >
             <TiDeleteOutline />
-            삭제하기
+            삭제
          </div>
       </div>
    )
