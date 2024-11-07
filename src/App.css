@@ -5,6 +5,7 @@ body {
 }
 .container {
    max-width: 1200px;
+   min-width: 340px;
    margin: 0 auto;
    padding: 10px;
 }
@@ -52,7 +53,7 @@ button {
    align-items: center;
    background-color: #2aa4eb;
    height: 40px;
-   max-width: 316px;
+   width: 280px;
    margin: 0 auto;
    border-radius: 2px;
    color: white;
@@ -60,7 +61,7 @@ button {
 
 .Insert input {
    height: 30px;
-   width: 250px;
+   width: 218px;
    border: none;
 }
 
@@ -70,7 +71,7 @@ button {
 
 .Insert button {
    font-weight: bold;
-   font-size: 18px;
+   font-size: 16px;
    background-color: #2aa4eb;
    color: white;
    margin-left: 5px;
